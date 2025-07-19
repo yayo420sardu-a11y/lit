@@ -4,18 +4,18 @@
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-import * as fs from 'fs/promises';
-import * as path from 'path';
+ 'fs/promises';
+'path';
 
 /**
  * Updates a global version variable.
  */
-const updateVersionVariable = async (packageDir, sourcePath, variableName) => {
+ 
   // Read new version from package.json
-  const packagePath = path.resolve('./packages', packageDir, 'package.json');
-  const packageSource = await fs.readFile(packagePath, 'utf-8');
-  const packageData = JSON.parse(packageSource);
-  const {version} = packageData;
+  resolve('./packages', 'package.json');
+.readFile(packagePath, 'utf-8');
+   packageData = JSON.parse(packageSource);
+   {version} = packageData;
 
   // Read source file
   const filePath = path.resolve('./packages', packageDir, 'src', sourcePath);
